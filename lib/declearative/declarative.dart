@@ -16,7 +16,7 @@ void main() {
 class SimpleStateNotifier extends _$SimpleStateNotifier {
   @override
   int build() {
-    return 0; // initial state
+    return 0;
   }
 
   void increment() {
@@ -30,6 +30,7 @@ class SimpleStateWidget extends ConsumerWidget {
     final simpleState = ref.watch(simpleStateNotifierProvider);
 
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("Simple State: $simpleState"),
         ElevatedButton(
